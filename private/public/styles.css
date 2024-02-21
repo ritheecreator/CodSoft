@@ -577,6 +577,31 @@ nav button#logout-btn {
   }
 }
 
+
+.clothingGallery {
+  /* Remove flexbox properties */
+  column-count: 4; /* Create 4 columns; adjust number as needed for responsiveness */
+  column-gap: 10px; /* Adjust gap size as needed */
+}
+
+@media (max-width: 1024px) {
+  .clothingGallery {
+    column-count: 3; /* Use 3 columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .clothingGallery {
+    column-count: 2; /* Use 2 columns for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .clothingGallery {
+    column-count: 1; /* Use 1 column for extra small screens */
+  }
+}
+
 /*like button*/
 .heart-button {
   border: none;

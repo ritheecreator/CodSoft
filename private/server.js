@@ -488,6 +488,53 @@ app.get('/api/posts/skinProducts', (req, res) => {
     });
 });
 
+app.get('/api/posts/clothing', (req, res) => {
+    // Query to select all posts from the recent_posts table
+    db.query('SELECT * FROM recent_posts WHERE id IN (3)', (err, results) => {
+        if (err) {
+            console.error('Error fetching posts from the database', err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+        res.json(results);
+    });
+});
+
+app.get('/api/posts/bags', (req, res) => {
+    // Query to select all posts from the recent_posts table
+    db.query('SELECT * FROM recent_posts WHERE id IN (17, 19, 20)', (err, results) => {
+        if (err) {
+            console.error('Error fetching posts from the database', err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+        res.json(results);
+    });
+});
+
+app.get('/api/posts/shoes', (req, res) => {
+    // Query to select all posts from the recent_posts table
+    db.query('SELECT * FROM recent_posts WHERE id IN (21, 22, 23)', (err, results) => {
+        if (err) {
+            console.error('Error fetching posts from the database', err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+        res.json(results);
+    });
+});
+
+app.get('/api/posts/styles', (req, res) => {
+    // Query to select all posts from the recent_posts table
+    db.query('SELECT * FROM recent_posts WHERE id IN (4, 6, 22)', (err, results) => {
+        if (err) {
+            console.error('Error fetching posts from the database', err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+        res.json(results);
+    });
+});
 
 // Route for accessing individual posts by ID
 app.get('/post/:id', (req, res) => {

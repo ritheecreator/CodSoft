@@ -234,6 +234,106 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  fetch('/api/posts/clothing')
+    .then(response => response.json())
+    .then(posts => {
+      const recentPostsContainer = document.getElementById('clothing-blog');
+      posts.forEach(post => {
+        const postElement = document.createElement('div');
+        const postDate = new Date(post.created_at).toLocaleString(); 
+        postElement.innerHTML = `
+          <div class="blog-post">
+              <img src="${post.image_url}" alt="Post image">
+                  <div class="blog-post-content" style="max-width:400px;">
+                      <h2>${post.title}</h2>
+                          <p>${post.summary}</p>
+                          <p>Posted by ${post.username} on ${postDate}</p>
+                          <a href="posts.html?id=${post.id}">Read more</a>
+                  </div>
+          </div>
+        `;
+        recentPostsContainer.appendChild(postElement);
+      });
+    })
+    .catch(error => console.error('Error fetching posts:', error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/api/posts/bags')
+    .then(response => response.json())
+    .then(posts => {
+      const recentPostsContainer = document.getElementById('bags-blog');
+      posts.forEach(post => {
+        const postElement = document.createElement('div');
+        const postDate = new Date(post.created_at).toLocaleString(); 
+        postElement.innerHTML = `
+          <div class="blog-post">
+              <img src="${post.image_url}" alt="Post image">
+                  <div class="blog-post-content" style="max-width:400px;">
+                      <h2>${post.title}</h2>
+                          <p>${post.summary}</p>
+                          <p>Posted by ${post.username} on ${postDate}</p>
+                          <a href="posts.html?id=${post.id}">Read more</a>
+                  </div>
+          </div>
+        `;
+        recentPostsContainer.appendChild(postElement);
+      });
+    })
+    .catch(error => console.error('Error fetching posts:', error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/api/posts/shoes')
+    .then(response => response.json())
+    .then(posts => {
+      const recentPostsContainer = document.getElementById('shoes-blog');
+      posts.forEach(post => {
+        const postElement = document.createElement('div');
+        const postDate = new Date(post.created_at).toLocaleString(); 
+        postElement.innerHTML = `
+          <div class="blog-post">
+              <img src="${post.image_url}" alt="Post image">
+                  <div class="blog-post-content" style="max-width:400px;">
+                      <h2>${post.title}</h2>
+                          <p>${post.summary}</p>
+                          <p>Posted by ${post.username} on ${postDate}</p>
+                          <a href="posts.html?id=${post.id}">Read more</a>
+                  </div>
+          </div>
+        `;
+        recentPostsContainer.appendChild(postElement);
+      });
+    })
+    .catch(error => console.error('Error fetching posts:', error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/api/posts/styles')
+    .then(response => response.json())
+    .then(posts => {
+      const recentPostsContainer = document.getElementById('styles-blog');
+      posts.forEach(post => {
+        const postElement = document.createElement('div');
+        const postDate = new Date(post.created_at).toLocaleString(); 
+        postElement.innerHTML = `
+          <div class="blog-post">
+              <img src="${post.image_url}" alt="Post image">
+                  <div class="blog-post-content" style="max-width:400px;">
+                      <h2>${post.title}</h2>
+                          <p>${post.summary}</p>
+                          <p>Posted by ${post.username} on ${postDate}</p>
+                          <a href="posts.html?id=${post.id}">Read more</a>
+                  </div>
+          </div>
+        `;
+        recentPostsContainer.appendChild(postElement);
+      });
+    })
+    .catch(error => console.error('Error fetching posts:', error));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.gallery');
     // Fetch gallery items from the server or define them here
     const galleryItems = [
@@ -274,6 +374,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     initializeLikeButtons();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.querySelector('.clothingGallery');
+  // Fetch gallery items from the server or define them here
+  const galleryItems = [
+      {
+          image_url: 'Images/flowyDress.jpeg',
+      },
+      {
+          image_url: 'Images/galleryImage.jpeg', 
+      },
+      {
+          image_url: 'Images/galleryImage1.jpeg', 
+      },
+      {
+          image_url: 'Images/galleryImage2.jpeg', 
+      },
+      
+  ];
+
+  galleryItems.forEach((item, index) => {
+      const galleryItem = document.createElement('div');
+      galleryItem.className = 'gallery-item';
+      galleryItem.innerHTML = `
+          <img src="${item.image_url}" alt="Gallery image ${index + 1}">
+          <button class="heart-button" data-post-id="${index}">Like ♥</button>
+      `;
+      gallery.appendChild(galleryItem);
+  });
+
+  initializeLikeButtons();
 });
 
 function initializeLikeButtons() {
