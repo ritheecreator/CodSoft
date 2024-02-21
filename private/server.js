@@ -274,7 +274,7 @@ app.get('/user/:userId/profile', async (req, res) => {
 });
 
 app.post('/create-post', upload.single('image'), (req, res) => {
-    const userId = req.session.userId; // Get user ID from session
+    const userId = req.session.userId; 
     const { content } = req.body;
     let imageUrl = req.file ? '/uploads/profile_pictures/' + req.file.filename : null; // If an image is uploaded, set its URL
 
@@ -409,7 +409,7 @@ app.get('/api/posts/makeup', (req, res) => {
     }
     
     // Otherwise, fetch from the database and shuffle
-    db.query('SELECT * FROM recent_posts WHERE id IN (1, 7, 8, 9, 10, 11)', (err, results) => {
+    db.query('SELECT * FROM recent_posts WHERE id IN (1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)', (err, results) => {
         if (err) {
             console.error('Error fetching posts from the database', err);
             res.status(500).send('Internal Server Error');
@@ -454,7 +454,7 @@ app.get('/api/posts/foundations', (req, res) => {
 
 app.get('/api/posts/skinCare', (req, res) => {
     // Query to select all posts from the recent_posts table
-    db.query('SELECT * FROM recent_posts WHERE id IN (2, 17, 18, 19, 20, 21)', (err, results) => {
+    db.query('SELECT * FROM recent_posts WHERE id IN (2, 17, 18, 5, 19, 20)', (err, results) => {
         if (err) {
             console.error('Error fetching posts from the database', err);
             res.status(500).send('Internal Server Error');
@@ -466,7 +466,7 @@ app.get('/api/posts/skinCare', (req, res) => {
 
 app.get('/api/posts/BeginnerSkinCare', (req, res) => {
     // Query to select all posts from the recent_posts table
-    db.query('SELECT * FROM recent_posts WHERE id IN (2, 22, 23)', (err, results) => {
+    db.query('SELECT * FROM recent_posts WHERE id IN (2, 5, 18)', (err, results) => {
         if (err) {
             console.error('Error fetching posts from the database', err);
             res.status(500).send('Internal Server Error');
@@ -478,7 +478,7 @@ app.get('/api/posts/BeginnerSkinCare', (req, res) => {
 
 app.get('/api/posts/skinProducts', (req, res) => {
     // Query to select all posts from the recent_posts table
-    db.query('SELECT * FROM recent_posts WHERE id IN (17, 24, 25)', (err, results) => {
+    db.query('SELECT * FROM recent_posts WHERE id IN (17, 19, 20)', (err, results) => {
         if (err) {
             console.error('Error fetching posts from the database', err);
             res.status(500).send('Internal Server Error');
@@ -487,6 +487,7 @@ app.get('/api/posts/skinProducts', (req, res) => {
         res.json(results);
     });
 });
+
 
 // Route for accessing individual posts by ID
 app.get('/post/:id', (req, res) => {
