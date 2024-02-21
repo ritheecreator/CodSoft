@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const recentPostsContainer = document.getElementById('BeginnerSkin-blog');
         posts.forEach(post => {
           const postElement = document.createElement('div');
-          // Assuming post.created_at exists and is formatted as you like, or use post.formattedTimestamp if you've formatted it in the backend
+         
           const postDate = new Date(post.created_at).toLocaleString(); // Converts timestamp to a readable string, adjust formatting as needed
           postElement.innerHTML = `
             <div class="blog-post">
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const recentPostsContainer = document.getElementById('skinProducts-blog');
         posts.forEach(post => {
           const postElement = document.createElement('div');
-          // Assuming post.created_at exists and is formatted as you like, or use post.formattedTimestamp if you've formatted it in the backend
+        
           const postDate = new Date(post.created_at).toLocaleString(); // Converts timestamp to a readable string, adjust formatting as needed
           postElement.innerHTML = `
             <div class="blog-post">
@@ -309,10 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('/api/posts/styles')
+  fetch('/api/posts/trending')
     .then(response => response.json())
     .then(posts => {
-      const recentPostsContainer = document.getElementById('styles-blog');
+      const recentPostsContainer = document.getElementById('trending-blog');
       posts.forEach(post => {
         const postElement = document.createElement('div');
         const postDate = new Date(post.created_at).toLocaleString(); 
@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.gallery');
-    // Fetch gallery items from the server or define them here
+    // Fetch gallery items from the server 
     const galleryItems = [
         {
             image_url: 'Images/birthdayMakeup.jpeg',
@@ -361,6 +361,15 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             image_url: 'Images/galleryImage6.jpeg', 
         },
+        {
+          image_url: 'Images/galleryImage7.jpeg', 
+      },
+      {
+          image_url: 'Images/galleryImage8.jpeg', 
+      },
+      {
+        image_url: 'Images/galleryImage9.jpeg', 
+    },
     ];
 
     galleryItems.forEach((item, index) => {
@@ -378,19 +387,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.querySelector('.clothingGallery');
-  // Fetch gallery items from the server or define them here
+
   const galleryItems = [
       {
           image_url: 'Images/flowyDress.jpeg',
       },
       {
-          image_url: 'Images/galleryImage.jpeg', 
+          image_url: 'Images/prints1.jpeg', 
       },
       {
-          image_url: 'Images/galleryImage1.jpeg', 
+          image_url: 'Images/boho.jpeg', 
       },
       {
-          image_url: 'Images/galleryImage2.jpeg', 
+          image_url: 'Images/prints2.jpeg', 
       },
       
   ];
@@ -410,9 +419,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initializeLikeButtons() {
     document.querySelectorAll('.heart-button').forEach(button => {
-        const postId = button.dataset.postId; // Now each button has a unique postId based on its index
+        const postId = button.dataset.postId; 
 
-        // Check if the post is liked in localStorage and update the button's class accordingly
+       
         if (localStorage.getItem(`liked-${postId}`) === 'true') {
             button.classList.add('liked');
         }
@@ -420,7 +429,6 @@ function initializeLikeButtons() {
         button.addEventListener('click', function() {
             const isLiked = this.classList.contains('liked');
             this.classList.toggle('liked');
-            // Correctly update localStorage with the new like state
             localStorage.setItem(`liked-${postId}`, !isLiked);
         });
     });
