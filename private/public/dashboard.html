@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Baskervville&family=Bodoni+Moda:ital,opsz@1,6..96&family=Castoro&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Diphylleia&family=Forum&family=Gilda+Display&family=IM+Fell+French+Canon&family=Krub:ital,wght@1,200&family=Manrope:wght@200&family=Playfair:ital,opsz,wght@1,5..1200,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Baskervville&family=Bodoni+Moda:ital,opsz@1,6..96&family=Castoro&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Diphylleia&family=Forum&family=Gilda+Display&family=IM+Fell+French+Canon&family=Krub:ital,wght@1,200&family=Manrope:wght@200&family=Playfair:ital,opsz,wght@1,5..1200,300&family=Saira+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="/index" >HOME</a>
+        <a href="/contact.html">CONTACT</a>
+        <a href="/index.html" Style="font-family: 'Cormorant Garamond', serif; font-size: 40px;">OPULENCE</a>
+        <a href="/about.html">ABOUT</a>
+        <button id="logout-btn" style="cursor: pointer;">LOGOUT</button>
+      </nav>
+      <section class="second-nav">
+    
+        <div class="dropdown">
+            <a href="/trending.html">Trending Now</a>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Makeup</button>
+            <div class="dropdown-content">
+                <a href="/makeup.html">All Makeup</a>
+                <a href="/makeupBeginnerTips.html">Makeup Tips</a>
+                <a href="/foundations.html">Foundations</a>
+                <a href="/makeupLooks.html">Makeup Looks</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Skin Care</button>
+            <div class="dropdown-content">
+                <a href="skinCare.html">All Skin Care</a>
+                <a href="skinBeginnerTips.html">Beginner Tips</a>
+                <a href="skinCareProducts.html">Products</a>
+            </div>
+        </div>
+       
+        <div class="dropdown">
+            <button class="dropbtn">Fashion</button>
+            <div class="dropdown-content">
+                <a href="/trendingStyles.html">Trending Styles</a>
+                <a href="/clothing.html">Clothing</a>
+                <a href="/bags">Bags</a>
+                <a href="/shoes.html">Shoes</a>
+            </div>
+        </div>
+    
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <div id="search-results" class="search-results-dropdown"></div>
+        </div>
+        
+        
+    </section>
+    <div class="dashboard-container">
+        <div class="user-profile">
+            <div class="profile-details">
+                <div class="profile-picture-container">
+                    <img src="uploads/profile_pictures/defaultProfilePicture.jpeg" alt="Profile Picture" id="profile-picture">
+                    <input type="file" id="profile-picture-input" style="display: none;" />
+                </div>
+            </div>
+            <div class="user-stats">
+                <div><span id="user-posts">0</span><br>Posts</div>
+                <div><span id="user-likes">0</span><br>Likes</div>
+            </div>
+        </div>
+        <div class="about-info">
+            <h3> <span id="user-name"></span></h3> 
+        </div>
+        <p id="user-bio">Click Here To Add Your Bio...</p>
+        
+        <div class="editButton">
+            <button class="btns" id="change-picture-btn">Change Picture</button>
+            <button class="btns" id="remove-picture-btn">Remove Picture</button>
+        </div>
+       
+    </div>
+    <div id="bio-edit-popup" class="bio-popup-container" style="display:none;">
+        <textarea id="bio-textarea">User bio goes here...</textarea>
+        <button id="save-bio">Save</button>
+        <button id="close-popup">Close</button>
+    </div>
+    <div class="left-container">
+    <div class="create-post-container">
+        <form id="create-post-form">
+            <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+            <input type="file" id="post-image" name="image" accept="image/*">
+            <button class="btns" type="submit">Post</button>
+        </form>
+        <div id="posts-container"></div>
+    </div>
+   
+    <div class="recent-posts-container">
+        <h2>Hot Topics</h2>
+        <div id="recent-posts"></div>
+        <!-- Dynamic recent posts will be inserted here -->
+    </div>
+</div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

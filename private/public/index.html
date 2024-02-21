@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Baskervville&family=Bodoni+Moda:ital,opsz@1,6..96&family=Castoro&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Diphylleia&family=Forum&family=Gilda+Display&family=IM+Fell+French+Canon&family=Krub:ital,wght@1,200&family=Manrope:wght@200&family=Playfair:ital,opsz,wght@1,5..1200,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Baskervville&family=Bodoni+Moda:ital,opsz@1,6..96&family=Castoro&family=Cinzel&family=Cormorant+Garamond:wght@300&family=Diphylleia&family=Forum&family=Gilda+Display&family=IM+Fell+French+Canon&family=Krub:ital,wght@1,200&family=Manrope:wght@200&family=Playfair:ital,opsz,wght@1,5..1200,300&family=Saira+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+</head>
+<body>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="index.html" Style="font-family: 'Cormorant Garamond', serif; font-size: 40px;">OPULENCE</a>
+        <a href="/dashboard" id="dashboardLink" >ME</a>
+        <a href="/login" id="loginLink">LOG IN</a>
+      </nav>
+      <section class="second-nav">
+    
+        <div class="dropdown">
+            <a href="/trending.html">Trending Now</a>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Makeup</button>
+            <div class="dropdown-content">
+                <a href="makeup.html">All Makeup</a>
+                <a href="/makeupBeginnerTips.html">Makeup Tips</a>
+                <a href="/foundations.html">Foundations</a>
+                <a href="/makeupLooks.html">Makeup Looks</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Skin Care</button>
+            <div class="dropdown-content">
+                <a href="skinCare.html">All Skin Care</a>
+                <a href="skinBeginnerTips.html">Beginner Tips</a>
+                <a href="skinCareProducts.html">Products</a>
+            </div>
+        </div>
+       
+        <div class="dropdown">
+            <button class="dropbtn">Outfits</button>
+            <div class="dropdown-content">
+                <a href="#beginner-tips">Beginner Tips</a>
+                <a href="#all">All</a>
+                <a href="#foundations">Foundations</a>
+                <a href="#eye-makeup">Eye Makeup</a>
+            </div>
+        </div>
+    
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <div id="search-results" class="search-results-dropdown"></div>
+        </div>
+    </section>
+    
+      <section class="trending-section swiper-container">
+        <h2>What's Trending</h2>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="featured-content">
+                    <div class="featured-image">
+                        <img src="Images/kittenHeels2.jpeg" alt="Trending Image">
+                    </div>
+            <div class="featured-text" style="margin-right: 4%;">
+                <h3>Kitten Heels</h3>
+                <p style="margin-right: 2%;">Kitten heels, once considered a relic of the past, have gracefully made their way back into the forefront of the fashion scene,
+                    marking a delightful comeback in recent trends. These dainty heels, characterized by their modest height ranging from 1.5 to 2 
+                    inches, are reclaiming their place as a chic and versatile footwear option. The revival of kitten heels reflects a shift towards 
+                    comfort without compromising on style.</p><br>
+                <p> Fashion enthusiasts and designers alike have embraced the kitten heel's understated elegance, recognizing its ability to 
+                    seamlessly transition from casual to formal settings. The resurgence of this timeless silhouette is celebrated for its ability 
+                    to provide a touch of sophistication to any ensemble, offering a middle ground between the towering stiletto and the practical 
+                    flat.</p>
+                <div class="read-more">
+                    <a href="#" onclick="showDetails(this)">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="featured-content" style="margin-left: 5%;">
+            <div class="featured-text">
+                <h3>Corset Top & Flowy Bottom Dresses</h3>
+                <p>Kitten heels, once considered a relic of the past, have gracefully made their way back into the forefront of the fashion scene,
+                    marking a delightful comeback in recent trends. These dainty heels, characterized by their modest height ranging from 1.5 to 2 
+                    inches, are reclaiming their place as a chic and versatile footwear option. The revival of kitten heels reflects a shift towards 
+                    comfort without compromising on style.</p><br>
+                <p> Fashion enthusiasts and designers alike have embraced the kitten heel's understated elegance, recognizing its ability to 
+                    seamlessly transition from casual to formal settings. The resurgence of this timeless silhouette is celebrated for its ability 
+                    to provide a touch of sophistication to any ensemble, offering a middle ground between the towering stiletto and the practical 
+                    flat.</p>
+                 <div class="read-more">
+                <a href="#" onclick="showDetails(this)">Read More</a>
+            </div>
+            </div>
+            <div class="featured-image">
+                <img src="Images/flowyDress1.jpeg" alt="Trending Image">
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="featured-content">
+            <div class="featured-image">
+                <img src="/Images/almondNails.jpeg" alt="Trending Image">
+            </div>
+    <div class="featured-text" style="margin-right: 4%;">
+        <h3>Almond Shape Nails</h3>
+        <p>Kitten heels, once considered a relic of the past, have gracefully made their way back into the forefront of the fashion scene,
+            marking a delightful comeback in recent trends. These dainty heels, characterized by their modest height ranging from 1.5 to 2 
+            inches, are reclaiming their place as a chic and versatile footwear option. The revival of kitten heels reflects a shift towards 
+            comfort without compromising on style.</p><br>
+        <p> Fashion enthusiasts and designers alike have embraced the kitten heel's understated elegance, recognizing its ability to 
+            seamlessly transition from casual to formal settings. The resurgence of this timeless silhouette is celebrated for its ability 
+            to provide a touch of sophistication to any ensemble, offering a middle ground between the towering stiletto and the practical 
+            flat.</p>
+        <div class="read-more">
+            <a href="#" onclick="showDetails(this)">Read More</a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="swiper-slide">
+    <div class="featured-content" style="margin-left: 5%;">
+        <div class="featured-text">
+            <h3>Baccarat Rouge 540</h3>
+            <p>Kitten heels, once considered a relic of the past, have gracefully made their way back into the forefront of the fashion scene,
+                marking a delightful comeback in recent trends. These dainty heels, characterized by their modest height ranging from 1.5 to 2 
+                inches, are reclaiming their place as a chic and versatile footwear option. The revival of kitten heels reflects a shift towards 
+                comfort without compromising on style.</p><br>
+            <p> Fashion enthusiasts and designers alike have embraced the kitten heel's understated elegance, recognizing its ability to 
+                seamlessly transition from casual to formal settings. The resurgence of this timeless silhouette is celebrated for its ability 
+                to provide a touch of sophistication to any ensemble, offering a middle ground between the towering stiletto and the practical 
+                flat.</p>
+             <div class="read-more">
+            <a href="#" onclick="showDetails(this)">Read More</a>
+        </div>
+        </div>
+        <div class="featured-image">
+            <img src="/Images/baccarat.jpeg" alt="Trending Image">
+        </div>
+    </div>
+</div>
+</div>
+<!-- Add pagination -->
+<div class="swiper-pagination"></div>
+    </section>
+    <section class="blog-section">
+        <div class="blog-container" id="index-blog">
+            <!-- Individual blog posts go here -->
+        </div>
+    </section>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+    <script src="app.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 5000,
+    },
+    // Adjust for 480px screens
+    480: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 40
+        }
+    }
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1192 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Saira Condensed', sans-serif;
+    font-family: Arial, sans-serif;
+}
+body{
+ background-color: #f5f5f5;
+}
+/* Navigation Bar Styling*/
+nav {
+    background-color: black;
+    overflow: hidden;
+  }
+
+nav a, nav button#logout-btn {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0 105px; /* Adjust as necessary for the button */
+    text-decoration: none;
+    line-height: 50px; 
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    border: none; /* Removes the default button border */
+    background: none; /* Makes the button background transparent */
+    cursor: pointer;
+    outline: none; /* Removes the focus outline */
+}
+
+/* Optionally, to ensure the button aligns well with links */
+nav button#logout-btn {
+    padding: 0 105px; /* Adjust this value if the button doesn't align perfectly */
+}
+  .second-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7e0d8;
+    padding: 5px;
+    position: relative;
+}
+
+.second-nav a,
+.second-nav button {
+    font-size: 14px; /* Set your desired font size */
+    text-decoration: none;
+    color: black;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight:100;
+    position: relative; /* Added position: relative */
+    z-index: 2;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 7%;
+}
+
+.dropbtn {
+    background-color: inherit;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    text-align: center;
+    left: 50%; /* Move the dropdown to the center of its container */
+    transform: translateX(-50%);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f7f4f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ /* Adjust the search bar styling */
+ .search-bar {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.search-bar input {
+  padding: 8px;
+  margin-right: 5px;
+  margin-bottom: -.5%;
+}
+
+.search-bar button {
+  padding: 8px;
+  background-color: #f7f4f0;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container {
+  position: relative; /* This makes it the reference for absolute positioning inside */
+  width: 100%; /* or a specific width, depending on your design */
+}
+
+.search-results-dropdown {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* This positions it right below the input field */
+  right: 20%;
+  width: 11.5%; /* Match the width of the search input */
+  background-color: #f6f6f6;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.search-results-dropdown div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.search-results-dropdown div:hover {
+  background-color: #ddd;
+}
+
+/* What's Trending Section Styling*/
+.trending-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.trending-section h2 {
+    color: black;
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 200;
+    font-family: 'Marcellus', serif;
+}
+
+.featured-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.featured-image {
+    flex: 0 0 48%; /* Adjust the width as needed */
+    max-width: 48%;
+    margin-bottom: 20px;
+}
+
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Set a maximum width for the image */
+    max-height: 600px;
+}
+
+.featured-text {
+    flex: 0 0 48%; /* Adjust the width as needed */
+    max-width: 48%;
+    text-align: left;
+}
+
+.featured-text h3 {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-family: 'Marcellus', serif;
+}
+
+.featured-text p {
+    color: black;
+    font-size: 15px;
+    line-height: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 100;
+}
+.read-more {
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+    margin-top: 5%;
+}
+
+.read-more a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #a8886c; /* Brown border color */
+    background-color: transparent; /* Clear background */
+    padding: 8px 16px; /* Adjust padding as needed */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.read-more a:hover {
+    background-color: #a8886c; /* Brown background color on hover */
+    color: #fff; /* White text color on hover */
+}
+/* Newsletter styling */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+ .popup-container button {
+    background: #a8886c;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup-content h2{
+   font-weight: 100;
+    font-family: 'Marcellus', serif;
+  }
+  #popupContainer {
+    z-index: 1000; 
+}
+/* swiper styling */
+.swiper-pagination-bullet-active {
+    background-color: black !important; /* Set the background color of the active dot to black, adjust as needed */
+}
+.swiper-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* blog content page styling */
+.post-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  margin: 20px;
+}
+
+.post-image {
+  flex: 1;
+  margin-right: 20px; /* Adjust as needed */
+  margin-left: 5px;
+}
+
+.post-image h3 {
+  font-family: 'Marcellus', serif;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+.step-by-step-guide li{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight:100;
+}
+
+.post-image img {
+  width: 100%; /* Make sure the image takes up the entire space of the container */
+  height: auto; /* Maintain the aspect ratio */
+}
+.post-content {
+  flex: 2;
+}
+
+.post-content p{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight:100;
+  line-height: 20px;
+}
+
+.post-content h2 {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Marcellus', serif;
+}
+
+.post-content .meta {
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-family: 'Titillium Web', sans-serif;
+}
+.buttons {
+  margin-top: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+.buttons button {
+  background: #a8886c;
+  color:white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
+.comment-section button {
+  background: #a8886c;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
+
+.comment-section {
+  margin-top: 5px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
+.comment-section h3 {
+  font-family: 'Marcellus', serif;
+  font-size: larger;
+}
+
+.comment-section textarea {
+  resize: none;
+  width: 90%;
+  height: 60px;
+}
+
+.comments {
+  text-align: left;
+  margin-top: 5px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
+
+/* user form styling*/
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Start with a width that works on mobile devices */
+  max-width: 600px; /* Maximum width for larger screens */
+  padding: 20px; 
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+.login-form h1 {
+  text-align: center;
+  color: #333; /* Set the color for the heading */
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
+  margin-bottom: 2%;
+}
+
+.login-form form {
+  max-width: 400px; /* Set a maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  background-color: transparent; /* Set a background color for the form */
+  padding: 20px;
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: black; /* Set the color for labels */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Set border color */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+.login-form input[type="submit"] {
+  background-color:#95846d; /* Set a background color for the submit button */
+  color: #fff; /* Set text color for the submit button */
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color:#a8886c; /* Change background color on hover */
+}
+
+.login-form button {
+  background-color: rgb(31, 31, 31); /* Set a background color for the button */
+  color: #fff; /* Set text color for the button */
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px; /* Add rounded corners */
+}
+
+.login-form button:hover {
+  background-color: black; /* Change background color on hover */
+}
+
+/* blog styling */
+
+.blog-section {
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-post {
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  height: 300px; /* Set the fixed height for all images */
+  object-fit: cover; 
+}
+
+.blog-post h2 {
+  font-family: 'Baskervville', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.blog-post a {
+  font-family: 'Arima', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #3498db;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+      flex-direction: column;
+  }
+  
+}
+
+.allMakeup-blog h2{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  margin:2%;
+}
+
+/*gallery styling*/
+.gallery-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.gallery {
+  /* Remove flexbox properties */
+  column-count: 4; /* Create 4 columns; adjust number as needed for responsiveness */
+  column-gap: 10px; /* Adjust gap size as needed */
+}
+
+.gallery-item {
+  break-inside: avoid; /* Prevent items from being split across columns */
+  margin-bottom: 10px; /* Adjust the spacing between items as needed */
+  width: 100%; /* Each item takes full width of the column */
+}
+
+.gallery-item img {
+  width: 100%; /* Ensure images are responsive within their container */
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Optional: Adds rounded corners to images */
+}
+
+@media (max-width: 1024px) {
+  .gallery {
+    column-count: 3; /* Use 3 columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2; /* Use 2 columns for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1; /* Use 1 column for extra small screens */
+  }
+}
+
+/*like button*/
+.heart-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  color: #bbb; /* Gray color indicating not liked */
+  float: left;
+}
+
+.heart-button.liked {
+  color: #e0245e; /* Change color when liked */
+}
+
+/*dashboard styling*/
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.profile-picture-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+.user-stats p {
+    margin: 5px 0;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile-picture-container {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.user-stats {
+    display: flex;
+    justify-content: space-around; /* Spread the stats across the available space */
+    width: 100%; /* Adjust or remove width as needed to fit your design */
+}
+
+.user-stats div {
+    display: flex;
+    flex-direction: column;
+}
+#user-bio {
+    text-align: left;
+    margin-top: 10px; /* Adjust spacing as needed */
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 100;
+}
+
+.bio-popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1000; /* Ensure it's above other content */
+    display: none; /* Hide by default */
+}
+
+.editButton{
+    display: flex;
+    margin: 10px;
+    gap:8px;
+    margin-top:0;
+    margin-left: 0;
+}
+.dashboard-container h3{
+    margin-left: 0;
+}
+.dashboard-container {
+    background-color: #fefefe;
+    margin: 1% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+    border-radius: 10px;
+}
+/* CSS for modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+/* Modal close button */
+.modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.create-post-container {
+  width: 60%; /* Adjust the width as needed */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 2%;
+}
+
+#create-post-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#create-post-form > * {
+  margin-bottom: 10px;
+}
+
+#post-content {
+  width: 97%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  min-height: 80px;
+}
+
+#post-image {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#create-post-form button {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+#create-post-form button:hover {
+  background-color: #4d3e2f;
+}
+
+/* Style the label to look like a button */
+#post-image-label {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  margin-top: -8px; /* Adjust to align with the button */
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+#post-image-label:hover {
+  background-color: #e0e0e0;
+}
+
+/* Optional: Clear floats (if any other float elements are present) */
+.create-post-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#posts-container {
+  width: 90%; /* Adjust the width as needed */
+  margin: 0 auto;
+  background-color: #f0f2f5;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.post {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width:95%;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-author {
+  font-weight: bold;
+  color: black;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 500;
+}
+
+.timestamp{
+  color: #606770;
+  margin-left: 2%;
+}
+
+.post-content {
+  margin-bottom: 10px;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.post-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-action {
+  color: #606770;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.post-action:hover {
+  text-decoration: underline;
+}
+.btns{
+  background: #a8886c;
+  color:white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 2px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+}
+
+#user-name{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 500;
+}
+.left-container {
+  float: left; /* Aligns the container to the left */
+  width: 100%; /* Adjust the width as needed */
+}
+.recent-posts-container{
+  width: 30%;
+  float: right;
+  margin-right: 2%;
+ 
+}
+.recent-posts-container h2{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  margin-bottom: 2%;
+}
+
+.recent-posts-container p{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 100;
+  margin-bottom: 2%;
+}
+
+.recent-posts-container h3{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  margin-bottom: 2%;
+}
+
+.recent-post-image {
+  width: 100%; /* Ensures the image always fits the container's width */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 4px; /* Adds rounded corners to the image */
+  margin-bottom: 10px; /* Adds space below the image */
+  object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
+  display: block; /* Ensures the image doesn't have extra space below it */
+  max-height: 400px; /* Limits the image height, remove if not needed */
+}
+
+.recent-posts-border{
+  border: 1px solid #ccc;
+  padding: 2%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+}
+.recent-posts-border a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #a8886c; /* Brown border color */
+  background-color: transparent; /* Clear background */
+  padding: 8px 16px; /* Adjust padding as needed */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  font-weight: 100;
+  font-size: 14px;
+}
+.recent-posts-border a:hover{
+  background-color: #a8886c; /* Brown background color on hover */
+  color: #fff; /* White text color on hover */
+}
+#recent-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Optional: adds space between posts */
+}
+
+/* recent-posts posts.html page styling*/
+.recent-article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px; /* Or adjust as needed */
+  margin-top: 20px; /* Adds top margin */
+  margin-bottom: 20px; /* Adjusts bottom margin for consistency */
+  padding: 20px; /* Optional: Adds some internal spacing */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.recent-header {
+  margin-bottom: 1em;
+}
+
+.recent-title {
+  color: #333;
+  font-size: 2em;
+}
+
+.recent-meta {
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.recent-body {
+  display: flex;
+  align-items: flex-start; /* Keep items aligned at the start */
+}
+
+.blog-image {
+  max-width: 30%; /* Make the image smaller */
+  height: auto;
+  margin-right: 1em; /* Add some space between the image and the content */
+}
+
+.recent-content {
+  text-align: justify;
+  color: #444;
+  width: 50%; /* Adjust based on your preference */
+}
+.recent-content p{
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight:100;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .blog-post {
+      flex-basis: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .swiper-slide:not(:first-child) {
+    display: none;
+  }
+ 
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav a, nav button#logout-btn {
+    float: none;
+    display: block;
+    padding: 10px; /* Reduced padding for smaller screens */
+    text-align: left; /* Align text to the left on small screens */
+    width: 100%; /* Make each nav item full width */
+  }
+
+  /* Adjustments for second-nav for better visibility on small screens */
+  .second-nav a,
+  .second-nav button {
+    font-size: 12px; /* Slightly reduce the font size */
+  }
+
+  /* Dropdown adjustments for small screens */
+  .dropdown-content {
+    left: 0;
+    transform: none;
+  }
+
+  /* Search bar adjustments for small screens */
+  .search-bar input, .search-bar button {
+    width: 100%; /* Make the search bar full width */
+    margin: 5px 0; /* Add some margin for better spacing */
+  }
+
+  /* Optional: Add a class for when the menu is toggled to show on small screens */
+  .nav-mobile-visible {
+    display: block;
+  }
+  .search-results-dropdown {
+    width: 60%; /* Increase width for smaller screens */
+    right: 0; /* Align to the right edge of the .search-container */
+    left: 20%; /* Adjust left positioning to not stretch full width and keep some alignment */
+  }
+  .login-form {
+    width: 80%; /* Adjusts width to 80% of the screen size */
+    padding: 10px; /* Reduces padding for smaller screens */
+    margin-top: 70%;
+  }
+
+  .login-form form {
+    padding: 15px; /* Adjust padding to ensure content has enough space */
+  }
+  .nav-toggle {
+    display: block; /* Show toggle button on small screens */
+    /* Additional styling for toggle button */
+  }
+  .create-post-container,
+  .recent-posts-container {
+    width: 100%;
+    float: none;
+    margin: 0;
+    margin-bottom: 20px; /* Adds some space between the containers on smaller screens */
+  }
+  nav a, nav button#logout-btn {
+    float: none;
+    display: block;
+    text-align: left; /* Align text to the left for a vertical menu */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+}
+
+/* Adjust second-nav for smaller screens */
+.second-nav {
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Adjust dropdown content to fit mobile view */
+.dropdown-content {
+    left: 0;
+    transform: translateX(0%);
+    text-align: left; /* Align dropdown text to the left */
+}
+
+/* Make the search bar full width */
+.search-bar input, .search-bar button {
+    flex-grow: 1; /* Allow input and button to fill space */
+    margin: 5px 0; /* Adjust margins for stacked layout */
+}
+
+.search-bar {
+    flex-direction: column; /* Stack input and button vertically */
+}
+
+.search-results-dropdown {
+    width: auto; /* Allow the dropdown to expand as needed */
+    right: 0; /* Align dropdown to the right edge of the search bar */
+}
+.featured-content {
+  flex-direction: row;
+}
+
+.featured-text, .featured-image {
+  flex: 1;
+}
+
+.featured-text {
+  margin-right: 20px; /* Adjust based on your design */
+  text-align: left;
+}
+.swiper-slide {
+  width: auto; /* Allows slides to have automatic width based on content */
+}
+
+
+}
+
+/* Consider adding a 'hamburger' menu icon for toggling the nav visibility on small screens */
+/* Example for a toggle button (not styled here) */
+.nav-toggle {
+  display: none; /* Only shown in the media query for small screens */
+  /* Style your toggle button */
+}
+
+
+@media (max-width: 480px) {
+  .search-results-dropdown {
+    width: 80%; /* Further increase width for very small screens */
+    left: 10%; /* Center it a bit more by reducing left margin */
+    right: 10%; /* Ensure some space on the right as well */
+  }
+  .login-form {
+    width: 95%; /* Further adjusts width for very small screens */
+    padding: 5px; /* Minimizes padding to use space efficiently */
+    margin-top: 135%;
+  }
+
+  .login-form h1 {
+    font-size: 1.5em; /* Adjusts heading size for better readability on small screens */
+  }
+  nav a, nav button#logout-btn {
+    padding: 8px 10px; /* Further reduce padding for very small screens */
+    font-size: 14px; /* Adjust font size for readability */
+}
+
+/* Adjust dropdown button font size */
+.dropbtn {
+    font-size: 14px;
+}
+
+/* Adjust margins for dropdowns to prevent overflow */
+.dropdown {
+    margin-right: 3%;
+}
+.featured-content {
+  flex-direction: column;
+}
+
+.featured-text, .featured-image {
+  flex: 1;
+}
+
+.featured-text {
+  margin: 0; /* Adjust text margin for smaller screens */
+  padding: 10px; /* Add padding for spacing */
+  text-align: center;
+}
+
+.read-more a {
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+/* Adjust the padding or margin of the section to ensure it fits well on the screen */
+.trending-section {
+  padding: 15px;
+}
+
+/* Adjust the image sizes if necessary */
+.featured-image img {
+  max-width: 100%;
+  height: auto;
+}
+.swiper-pagination {
+  bottom: 0px; /* Adjust pagination position for smaller screens */
+}
+}
+
+@media (min-width: 481px) {
+  .featured-content {
+      flex-direction: row;
+  }
+
+  .featured-text {
+      margin-right: 20px;
+      text-align: left;
+  }
+}
+
+
+
+
+
