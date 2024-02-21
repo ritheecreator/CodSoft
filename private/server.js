@@ -536,6 +536,7 @@ app.get('/api/posts/trending', (req, res) => {
     });
 });
 
+
 // Route for accessing individual posts by ID
 app.get('/post/:id', (req, res) => {
     const postId = req.params.id;
