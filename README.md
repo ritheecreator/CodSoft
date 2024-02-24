@@ -1,4 +1,5 @@
 Opulence: The Fashion and Beauty Almanac for the Modern Woman.
+Craeted using HTML5, CSS3, Javascript, Node.js and MySQL
 
 Welcome to Opulence, the quintessential fashion and beauty blog tailored for the modern woman who appreciates the finer things in life. 
 This is your sanctuary for exploring the vast and vibrant world of fashion and beauty. Our blog is dedicated to providing you with the latest trends, 
