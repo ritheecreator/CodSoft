@@ -540,6 +540,7 @@ nav button#logout-btn {
   margin: 20px;
 }
 
+
 .gallery {
   /* Remove flexbox properties */
   column-count: 4; /* Create 4 columns; adjust number as needed for responsiveness */

@@ -333,6 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error('Error fetching posts:', error));
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.gallery');
     // Fetch gallery items from the server 

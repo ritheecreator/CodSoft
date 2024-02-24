@@ -512,6 +512,7 @@ app.get('/api/posts/bags', (req, res) => {
     });
 });
 
+
 app.get('/api/posts/shoes', (req, res) => {
     // Query to select all posts from the recent_posts table
     db.query('SELECT * FROM recent_posts WHERE id IN (21, 22, 23)', (err, results) => {
